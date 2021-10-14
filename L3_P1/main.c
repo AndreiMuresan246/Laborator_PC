@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <math.h>
 #include <limits.h>
-int functie(double i)
+double functie(double i)
 {
     double r;
     r = (pow(i,4)) - (5*pow(i,2)) + (3*i) + 20;
@@ -11,10 +11,11 @@ int functie(double i)
 int main()
 {
     double n, m;
-    double r, eps = 0.001, minim = INT_MAX, val_minim, i;
+    double r, eps = 0.001, minim , val_minim, i;
     printf("Introduce-ti valorile intervalului in care f(x) exista ");
     scanf("%lf", &n);
     scanf("%lf", &m);
+    minim = f(n);
     for(i = n; i <= m; i = i + eps)
     {
         r = functie(i);
